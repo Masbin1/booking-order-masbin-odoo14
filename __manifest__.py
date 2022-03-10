@@ -17,6 +17,7 @@
     # for the full list
     'category': 'Uncategorized',
     'version': '0.1',
+    'aplication':True,
 
     # any module necessary for this one to work correctly
     'depends': ['base'],
@@ -24,12 +25,12 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-        'views/wo_sequence.xml',
+        'data/wo_sequence.xml',
         'views/menu_item.xml',
         'views/sale_order.xml',
         'views/service_team.xml',
         'views/work_order.xml',
-        'wizard/cancel_state.xml',
+        'wizard/cancle_state.xml',
         'report/work_order_report.xml',
     ],
     # only loaded in demonstration mode
