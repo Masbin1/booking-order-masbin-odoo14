@@ -32,9 +32,6 @@
         'views/work_order.xml',
         'wizard/cancle_state.xml',
         'report/work_order_report.xml',
-    ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
+        'report/report.xml'
     ],
 }
