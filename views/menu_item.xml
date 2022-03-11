@@ -4,25 +4,28 @@
         <menuitem 
             id="master_menu" 
             name="Booking" 
-            sequence="1"
+            parent="sales_team.menu_base_partner" 
+            sequence="5"
         />
         <menuitem 
-            id="master_a"
-            parent="master_menu" 
-            name="Booking Order Bintang"
-            sequence="10"
-        />
+            name="Booking Order" 
+            id="booking_order_main"
+            parent="booking_main" 
+            sequence="1" 
+            action="booking_order_action"/>
+
         <menuitem 
-            id="master_b"
-            parent="master_menu" 
-            name="Work Order"
-            sequence="20"
-        />
+            name="Work Order" 
+            id="work_order_main"
+            parent="booking_main" 
+            sequence="2" 
+            action="work_order_action"/>
+
         <menuitem 
-            id="master_c"
-            parent="master_menu" 
-            name="Service Team"
-            sequence="30"
-        />
+            name="Service Team" 
+            id="service_team_main"
+            parent="booking_main" 
+            sequence="3" 
+            action="service_team_action"/>
     </data>
 </odoo>
