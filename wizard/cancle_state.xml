@@ -21,6 +21,5 @@
         <act_window name="cancelled Work Order" id="action_cancel"
                     res_model="cancelled.wo"
                     view_mode="form" target="new"/>
-
     </data>
 </odoo>
