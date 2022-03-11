@@ -4,7 +4,7 @@ class WorkOrder(models.Model):
     _name = 'work.order'
     _description = 'Model Work Order'
 
-    WO_number = fields.Char(
+    wo_number = fields.Char(
         string='WO Number', 
         readonly=True, 
         copy=False, 
