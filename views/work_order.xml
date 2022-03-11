@@ -31,7 +31,7 @@
                 </tree>
             </field>
         </record>
-
+        <!--work order form form-->
         <record id="work_order_form" model="ir.ui.view">
             <field name="name">work.order.form</field>
             <field name="model">work.order</field>
@@ -69,7 +69,7 @@
                 </form>
             </field>
         </record>
-
+        <!--kanban-->
         <record model="ir.ui.view" id="view_work_order_kanban">
             <field name="name">work.order.kanban</field>
             <field name="model">work.order</field>
@@ -133,7 +133,7 @@
                 </kanban>
             </field>
         </record>
-
+        <!--search-->
         <record id="work_order_view_search" model="ir.ui.view">
             <field name="name">work.order.search</field>
             <field name="model">work.order</field>
