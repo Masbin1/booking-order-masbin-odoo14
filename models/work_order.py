@@ -3,7 +3,7 @@ from odoo import fields, models, api, _
 
 
 class WorkOrder(models.Model):
-    _name = 'booking.work_order'
+    _name = 'work.order'
     _description = 'Work Order'
     _rec_name = "wo_number"
 
@@ -17,7 +17,7 @@ class WorkOrder(models.Model):
         comodel_name='sale.order',
         readonly=True)
     team = fields.Many2one(
-        comodel_name='booking.service_team',
+        comodel_name='service.team',
         required=True)
     team_leader = fields.Many2one(
         comodel_name='res.users',
@@ -51,9 +51,9 @@ class WorkOrder(models.Model):
         if vals.get('wo_number', _('New')) == _('New'):
             if 'company_id' in vals:
                 vals['wo_number'] = self.env['ir.sequence'].with_context(force_company=vals['company_id']).next_by_code(
-                    'booking.work_order') or _('New')
+                    'work.order') or _('New')
             else:
-                vals['wo_number'] = self.env['ir.sequence'].next_by_code('booking.work_order') or _('New')
+                vals['wo_number'] = self.env['ir.sequence'].next_by_code('work.order') or _('New')
         return super(WorkOrder, self).create(vals)
 
     def start_work(self):

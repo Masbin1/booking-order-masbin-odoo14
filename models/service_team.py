@@ -2,7 +2,7 @@ from odoo import fields, models, api
 
 
 class ServiceTeam(models.Model):
-    _name = 'booking.service_team'
+    _name = 'service.team'
     _description = 'Service Team'
 
     name = fields.Char(

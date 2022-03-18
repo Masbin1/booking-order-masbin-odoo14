@@ -3,7 +3,7 @@
     <data>
         <report id="work_order"
                 string="Print Work Order"
-                model="booking.work_order"
+                model="work.order"
                 report_type="qweb-pdf"
                 name="report_work_order"
         />
