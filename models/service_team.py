@@ -1,18 +1,17 @@
-from odoo import models, fields, api
+from odoo import fields, models, api
+
 
 class ServiceTeam(models.Model):
-    _name = 'service.team'
-    _description = 'Model Service Team'
+    _name = 'booking.service_team'
+    _description = 'Service Team'
 
-    team = fields.Char(
-        string='Team Name', 
-        required=True, )
-
+    name = fields.Char(
+        string='Team Name',
+        required=True)
     team_leader = fields.Many2one(
-        comodel_name='res.users', 
-        string='Team Leader', 
-        required=True, )
-
+        comodel_name='res.users',
+        string='Team Leader',
+        required=True)
     team_members = fields.Many2many(
         comodel_name='res.users',
-        string='Team Member')
+        string='Team Members')

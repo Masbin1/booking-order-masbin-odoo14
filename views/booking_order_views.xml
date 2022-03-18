@@ -1,14 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <!-- Form View -->
-        <record model="ir.ui.view" id="sale_order_booking_form">
-            <field name="name">Sales Order Booking </field>
+        <record id="booking_order_view_form" model="ir.ui.view">
+            <field name="name">booking.order.form</field>
             <field name="model">sale.order</field>
             <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//button[@name='action_confirm']" position="before">
-                    <button string="Check" name="cek_work_order" type="object" class="oe_highlight"/>
+                <xpath expr='//button[@name="action_confirm"]' position="after">
+                    <button name="action_check" string="Check" class="btn-primary" type="object"/>
                 </xpath>
                 <xpath expr="//button[@name='action_view_invoice']" position="after">
                     <button type="action" name="%(action_view_wo)d"
@@ -17,7 +16,7 @@
                         <field name="wo_count" widget="statinfo" string="Work Order"/>
                     </button>
                 </xpath>
-               <field name="partner_id" position="after">
+                <field name="partner_id" position="after">
                     <field name="is_booking_order" invisible="1"/>
                     <field name="team" required="1" attrs="{'invisible': [('is_booking_order', '=', False)]}"/>
                     <field name="team_leader" required="1" attrs="{'invisible': [('is_booking_order', '=', False)]}"/>
@@ -31,7 +30,7 @@
             </field>
         </record>
 
-       <record id="booking_order_action" model="ir.actions.act_window">
+        <record id="booking_order_action" model="ir.actions.act_window">
             <field name="name">Booking Order</field>
             <field name="res_model">sale.order</field>
             <field name="view_mode">tree,form</field>
@@ -46,6 +45,5 @@
                 <p>Klik Tombol Create Untuk Booking Order baru</p>
             </field>
         </record>
-
     </data>
 </odoo>
