@@ -82,6 +82,6 @@ class BookingOrder(models.Model):
             wo_obj.create([{'bo_reference': order.id,
                             'team': order.team.id,
                             'team_leader': order.team_leader.id,
-                            'team_members': [(4, order.team_members.ids)],
+                            'team_members': [(order.team_members.ids)],
                             'planned_start': order.booking_start,
                             'planned_end': order.booking_end}])
